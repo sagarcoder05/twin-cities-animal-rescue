@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Twin Cities Animal Rescue</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="contact-page">
+
+  <header>
+    <div class="header-inner">
+    <a href="index.html">
+      <img src="images/rescue-logo_c.png" alt="Twin Cities Animal Rescue home" width="180">
+    </a>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <h1>Contact Our Team</h1>
+
+    <section class="full-width">
+      <h2>Your Interest in Helping</h2>
+      <p>Use this form to ask about volunteering, fostering, or adopting a pet. You can also ask about donations or community support.</p>
+
+      <p>Fields marked required must be completed. An inquiry does not confirm an adoption or foster placement.</p>
+
+      <form id="interest-form" action="#" method="post">
+        <fieldset>
+          <legend>Your Contact Details</legend>
+
+          <p>
+            <label for="full-name">Full name (required)</label>
+            <input type="text" id="full-name" name="full_name" required minlength="2"
+                   maxlength="80">
+          </p>
+
+          <p>
+            <label for="email">Email address (required)</label>
+       <input type="email" id="email" name="email" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Request</legend>
+
+          <p>
+            <label for="interest">Type of interest (required)</label>
+            <select id="interest" name="interest" required>
+              <option value="">Choose one</option>
+              <option value="volunteer">Volunteering</option>
+              <option value="foster">Fostering</option>
+              <option value="adoption">Adoption information</option>
+              <option value="other">Donation, partnership, or another question</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="availability">Days and times you are available (optional)</label>
+            <textarea id="availability" name="availability" rows="3" cols="30" maxlength="300"></textarea>
+          </p>
+
+          <p>
+            <label for="experience">Experience with pets (required)</label>
+            <select id="experience" name="experience" required>
+              <option value="">Choose one</option>
+              <option value="none">I have no experience yet</option>
+              <option value="some">I have some experience</option>
+              <option value="regular">I care for pets regularly</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="message">Your message (required, 10 to 500 characters)</label>
+         <textarea id="message" name="message" rows="5" cols="30" required minlength="10" maxlength="500"></textarea>
+          </p>
+        </fieldset>
+
+        <button type="submit">Send Interest Request</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Service Area</h2>
+      <p class="placeholder">(placeholder)(placeholder)</p>
+    </section>
+
+    <section>
+      <h2>Office Hours</h2>
+      <p class="placeholder">(placeholder)(placeholder)</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>2026 Twin Cities Animal Rescue</p>
+  </footer>
+</body>
+</html>

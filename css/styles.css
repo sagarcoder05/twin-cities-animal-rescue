@@ -1,0 +1,252 @@
+/* Shared color palette: strictly 4 colors */
+:root {
+  --cream: #FFF8F0;
+  --brown: #6B3E26;
+  --peach: #D88C5A;
+  --charcoal: #2F2A26;
+}
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Base mobile-first styles */
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+  background-color: var(--brown);
+  padding: 1rem;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-inner img {
+  display: block;
+  max-width: 180px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+nav li {
+  width: 100%;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  background-color: var(--peach);
+  color: var(--charcoal);
+}
+
+/* Main Content Area */
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--brown);
+  font-size: 1.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: var(--brown);
+  font-size: 1.35rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  color: var(--charcoal);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Content Sections */
+section {
+  background-color: var(--cream);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-radius: 6px;
+  border: 2px solid var(--peach);
+}
+
+.placeholder {
+  font-style: italic;
+  color: var(--charcoal);
+}
+
+/* Links and Buttons */
+a {
+  color: var(--brown);
+}
+
+.button-link,
+button[type="submit"] {
+  display: inline-block;
+  background-color: var(--brown);
+  color: var(--cream);
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid var(--brown);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-link:hover,
+button[type="submit"]:hover {
+  background-color: var(--peach);
+  color: var(--charcoal);
+  border-color: var(--peach);
+}
+
+/* Media Elements */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Forms */
+fieldset {
+  border: 2px solid var(--brown);
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+legend {
+  color: var(--brown);
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--charcoal);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--cream);
+  color: var(--charcoal);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Footer */
+footer {
+  background-color: var(--brown);
+  color: var(--cream);
+  text-align: center;
+  padding: 1.25rem 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Layout for Tablet and Desktop (768px and up) */
+@media (min-width: 768px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+  }
+
+  nav li {
+    width: auto;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .feature-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .feature-text {
+    flex: 1;
+  }
+
+  .feature-media {
+    flex: 1;
+  }
+}

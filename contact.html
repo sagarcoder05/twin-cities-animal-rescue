@@ -5,23 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Twin Cities Animal Rescue</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body class="contact-page">
 
   <header>
     <div class="header-inner">
-    <a href="index.html">
-      <img src="images/rescue-logo_c.png" alt="Twin Cities Animal Rescue home" width="180">
-    </a>
+      <a href="index.html">
+        <img src="images/rescue-logo_c.png"
+             alt="Twin Cities Animal Rescue home" width="180">
+      </a>
 
-    <nav aria-label="Primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
-      </ul>
-    </nav>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -33,20 +35,56 @@
       <p>Use this form to ask about volunteering, fostering, or adopting a pet. You can also ask about donations or community support.</p>
 
       <p>Fields marked required must be completed. An inquiry does not confirm an adoption or foster placement.</p>
+      <p>This form checks your details. It does not send a request to the rescue.</p>
 
       <form id="interest-form" action="#" method="post">
+        <fieldset>
+          <legend>Explore Volunteer Roles</legend>
+
+          <p>Choose a role to see how you can help. Your choice will be remembered on this browser. Choose "No role selected" to clear it.</p>
+
+          <p>
+            <label for="volunteer-role">Volunteer role (optional)</label>
+            <select id="volunteer-role" name="volunteer_role">
+              <option value="">No role selected</option>
+              <option value="daily-care">Daily Care</option>
+              <option value="time-with-pets">Time With Pets</option>
+              <option value="community-support">Community Support</option>
+            </select>
+          </p>
+
+          <div class="role-result" aria-live="polite">
+            <h3 id="role-title">Find a way to help</h3>
+            <p id="role-description">Choose a role above to read about it.</p>
+          </div>
+
+          <p id="role-storage-status" role="status"></p>
+        </fieldset>
+
         <fieldset>
           <legend>Your Contact Details</legend>
 
           <p>
             <label for="full-name">Full name (required)</label>
-            <input type="text" id="full-name" name="full_name" required minlength="2"
-                   maxlength="80">
+            <input type="text" id="full-name" name="full_name"
+                   required minlength="2" maxlength="80"
+                   aria-describedby="full-name-error">
+            <span id="full-name-error" class="field-error"></span>
           </p>
 
           <p>
             <label for="email">Email address (required)</label>
-       <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required
+                   aria-describedby="email-error">
+            <span id="email-error" class="field-error"></span>
+          </p>
+
+          <p>
+            <label class="checkbox-label" for="remember-email">
+              <input type="checkbox" id="remember-email">
+              Remember my email on this browser
+            </label>
+            <span id="email-storage-status" role="status"></span>
           </p>
         </fieldset>
 
@@ -55,37 +93,46 @@
 
           <p>
             <label for="interest">Type of interest (required)</label>
-            <select id="interest" name="interest" required>
+            <select id="interest" name="interest" required
+                    aria-describedby="interest-error">
               <option value="">Choose one</option>
               <option value="volunteer">Volunteering</option>
               <option value="foster">Fostering</option>
               <option value="adoption">Adoption information</option>
               <option value="other">Donation, partnership, or another question</option>
             </select>
+            <span id="interest-error" class="field-error"></span>
           </p>
 
           <p>
             <label for="availability">Days and times you are available (optional)</label>
-            <textarea id="availability" name="availability" rows="3" cols="30" maxlength="300"></textarea>
+            <textarea id="availability" name="availability"
+                      rows="3" cols="30" maxlength="300"></textarea>
           </p>
 
           <p>
             <label for="experience">Experience with pets (required)</label>
-            <select id="experience" name="experience" required>
+            <select id="experience" name="experience" required
+                    aria-describedby="experience-error">
               <option value="">Choose one</option>
               <option value="none">I have no experience yet</option>
               <option value="some">I have some experience</option>
               <option value="regular">I care for pets regularly</option>
             </select>
+            <span id="experience-error" class="field-error"></span>
           </p>
 
           <p>
             <label for="message">Your message (required, 10 to 500 characters)</label>
-         <textarea id="message" name="message" rows="5" cols="30" required minlength="10" maxlength="500"></textarea>
+            <textarea id="message" name="message" rows="5" cols="30"
+                      required minlength="10" maxlength="500"
+                      aria-describedby="message-error"></textarea>
+            <span id="message-error" class="field-error"></span>
           </p>
         </fieldset>
 
-        <button type="submit">Send Interest Request</button>
+        <button type="submit">Check Interest Request</button>
+        <p id="form-status" role="status"></p>
       </form>
     </section>
 
@@ -103,5 +150,6 @@
   <footer>
     <p>2026 Twin Cities Animal Rescue</p>
   </footer>
+
 </body>
 </html>

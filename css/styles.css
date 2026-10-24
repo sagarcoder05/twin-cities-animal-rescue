@@ -250,3 +250,31 @@ footer p {
     flex: 1;
   }
 }
+
+.role-result {
+  border-left: 4px solid var(--brown);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.field-error {
+  display: block;
+  color: var(--brown);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+input.input-error,
+select.input-error,
+textarea.input-error {
+  border: 2px solid var(--brown);
+}
+
+.checkbox-label {
+  font-weight: normal;
+}
+
+#form-status {
+  font-weight: bold;
+  margin-top: 1rem;
+}

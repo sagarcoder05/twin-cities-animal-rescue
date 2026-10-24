@@ -16,6 +16,8 @@ const volunteerRoles = [
   }
 ];
 
+
+
 const formFields = [
   {
     id: "full-name",
@@ -54,13 +56,14 @@ const roleSelect = document.getElementById("volunteer-role");
 const roleTitle = document.getElementById("role-title");
 const roleDescription = document.getElementById("role-description");
 const roleStatus = document.getElementById("role-storage-status");
+
 const emailInput = document.getElementById("email");
 const rememberEmail = document.getElementById("remember-email");
 const emailStatus = document.getElementById("email-storage-status");
 const formStatus = document.getElementById("form-status");
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-function showVolunteerRole() {
+function showVolunteerRole(){
   roleTitle.textContent = "Find a way to help";
   roleDescription.textContent = "Choose a role above to read about it.";
 
